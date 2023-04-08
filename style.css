@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Fraunces", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container{
+    border-radius: 10px;
+    display: flex;
+    max-width: 666px;
+    background-color: white;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.container .img-container{
+    width: 50%;
+}
+
+.img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container .text-container{
+    width: 50%;
+    padding: 2rem;
+    gap: .5rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-container .category{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: .9rem;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 1.2rem;
+}
+
+.text-container .title{
+    color: hsl(212, 21%, 14%);
+    padding-right: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.text-container .description{
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 22px;
+    margin-bottom: 1.75rem;
+}
+
+.text-container .price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.text-container .price h1{
+    color: hsl(158, 36%, 37%);
+}
+
+.text-container .price p{
+    font-family: "Montserrat";
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.text-container .cart-btn{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Montserrat";
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.text-container .cart-btn:hover{
+    background-color: hsl(212, 21%, 14%);
+}
+
+.text-container .cart-btn h2{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        flex-direction: column;
+        max-width: 90%;
+        margin: 1rem 0 1rem 0;
+    }
+    
+    .container .img-container{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img-container img{
+        content: url("./images/image-product-mobile.jpg");
+    }
+    
+    .container .text-container{
+        width: 100%;
+    }
+
+    .text-container .title{
+        padding-right: 0;
+    }
+}
